@@ -66,6 +66,21 @@ public class RedisClient {
         }
     }
 
+    /**
+     * set hash
+     *
+     */
+    public void hset(String key, String field, String value){
+        jedis.hset(key,field,value);
+    }
+
+    /**
+     * get hash
+     */
+    public String hget(String key, String field){
+        return jedis.hget(key,field);
+    }
+
 
     class SerializationUtil {
         /**

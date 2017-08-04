@@ -34,5 +34,17 @@ public class RedisClientTest extends TestCase {
 
     }
 
+    public void testHset() throws Exception{
+        RedisClient redisClient = new RedisClient();
+        redisClient.hset("car1","name", "BM");
+
+    }
+
+    public void testHget() throws Exception{
+        RedisClient redisClient = new RedisClient();
+
+        System.out.println(redisClient.hget("car1", "name"));
+    }
+
 
 }
